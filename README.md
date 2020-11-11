@@ -1,4 +1,4 @@
-# WINC_Module_8
+# WINC Module 8
 
 ## Subjects
 
