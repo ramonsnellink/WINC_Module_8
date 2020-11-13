@@ -14,7 +14,12 @@ const divideByDay = (appointments) => {
   return appointmentsByDay;
 };
 
-export default ({ appointments }) => {
+export default ({
+  appointments,
+  handleMakeDentistSick,
+  handleAddAppointment,
+  handlePatientSick,
+}) => {
   const appointmentsByDay = divideByDay(appointments);
 
   const daysInMonthJSX = Object.values(appointmentsByDay).map((appointmentsInDay, index) => (
@@ -23,6 +28,11 @@ export default ({ appointments }) => {
 
   return (
     <div className="calendarview">
+      <button onClick={() => handleMakeDentistSick()}>Make Dentist sick</button>
+      <button onClick={() => handleAddAppointment()}>Add appointment</button>
+      <button onClick={() => handlePatientSick(43)}>Make Patient Sick</button>
+
+      {console.log("Appointments in calendar", appointments)}
       <div className="header">
         <div>Maandag</div>
         <div>Dinsdag</div>
