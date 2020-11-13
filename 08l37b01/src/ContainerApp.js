@@ -140,6 +140,7 @@ const ContainerApp = () => {
 
     const newAppointments = appointments.map((appointment) => {
       if (appointment.patient === patient && appointment.time === time) {
+        // checking if the dentist / assistant is available is not working.
         appointment.time = newTime;
         appointment.day = newDate;
         console.log(appointment);
